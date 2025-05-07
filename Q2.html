@@ -6,16 +6,22 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="Area"></h1>
     <script>
         //write a program to create parameterized constructor and circle method to calculate area of the circle print on body.
 
         let area;
         function Circle(radius){
             this.radius = radius;
-        
-            area = 3.14*this.radius*this.radius;
+            this.area = function()
+            {
+                return 3.14*this.radius*this.radius;
+            }
+            
     }
         const C = new Circle(5);
+        area = C.area();
+        document.getElementById("Area").innerText = area.toFixed(2); //toFixed(val) is used by decimal number. 
         document.write(`Area of Circle : ${area}`);
         // console.log(area);
     </script>

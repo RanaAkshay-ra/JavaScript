@@ -13,14 +13,14 @@
             // Example x = 32243;
 
             // Expected Output : 34223
-            let x = 32243;
+            let x = 12345;
             let a =x;
             let b=0;
             let r=0;
             while(a>0){
                 b=a%10;
                 r = (r*10)+b;
-                a =a/10 |0;
+                a =a/10 | 0;
             }
             document.write(`32243 Reverse Number is :${r}`);
             console.log(`32243 Reverse Number is :${r}`);
